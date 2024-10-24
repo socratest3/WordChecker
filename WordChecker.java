@@ -1,27 +1,32 @@
 import java.util.ArrayList;
 public class WordChecker {
     private ArrayList<String> wordList;
-    public WordChecker(){
+    public WordChecker()
+    {
         wordList = new ArrayList<String>();
     }
     public WordChecker(ArrayList<String> list)
     {
         wordList = list;
     }
-    public boolean isWordChain() {
+    
+    public boolean isWordChain() 
+    {
         boolean wordChain = true;
-        for(int i = 1; i< wordList.size(); i++){
+        for(int i = 1; i< wordList.size(); i++)
+        {
             String after = wordList.get(i);
             String before = wordList.get(i-1);
-        if(after.indexOf(before)< 0){
+        if(after.indexOf(before)< 0)
+        {
             return false;
         }
     }
      return wordChain;   
     }
 
-    
-    public ArrayList<String> createList(String target){
+    public ArrayList<String> createList(String target)
+    {
     ArrayList<String> list = new ArrayList<String>();
     for(String s: wordList)
     if(s.indexOf(target)==0)
